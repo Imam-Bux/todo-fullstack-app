@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { FaBolt, FaPlus, FaPen, FaCheck, FaCheckDouble, FaTrash, FaHeart } from 'react-icons/fa';
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000/todo";
+const API_URL = process.env.NEXT_PUBLIC_API_URL ? `${process.env.NEXT_PUBLIC_API_URL}/todo` : "http://localhost:4000/todo";
 import axios from 'axios';
 export default function Todo() {
   const [tasks, setTasks] = useState("");
