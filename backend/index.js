@@ -2,7 +2,7 @@ const express=require('express');
 const app=express();
 const cors=require('cors')
 const todoRoutes=require('./src/todo/route');
-const port=4000;
+const port = process.env.PORT || 4000;
 app.use(cors("*"))
 app.use(express.json());
 app.use('/todo',todoRoutes)
